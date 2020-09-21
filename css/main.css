@@ -35,3 +35,6 @@
 
 /**	05	Media Inquiry  **/
 
+.intro>h1{
+  background-image: url(img/zengarden.gif);
+}
