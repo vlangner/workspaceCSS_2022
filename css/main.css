@@ -176,4 +176,34 @@ div.summary{
 
 /** other decoration **/
 
+/* nav bar on top */
+#zen-resources {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: blanchedalmond;
+}
+
+/* hide the h3 inside of zen resources */
+#zen-resources h3{
+  display:none;
+}
+
+#zen-resources ul li{
+  display: inline-block;
+  padding: 2%;
+  width: 200px;
+  background-color: hsla(234,35%,89%,0.9);
+}
+
+#zen-resources a{
+  border: 0px;
+}
+
+
+
+
+
+
 /**	05	Media  **/
