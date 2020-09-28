@@ -201,9 +201,33 @@ div.summary{
   border: 0px;
 }
 
+/* hover over active practice */
+p:active{
+  border: 5px solid brown;
+}
 
+p{
+  visibility: visible;
+}
 
+h3:active ~p{
+  visibility: hidden;
+}
 
+li:first-of-type{
+  color:blueviolet;
+}
+
+p::first-letter{
+  font-size: 300%;
+}
+
+p:nth-child(3n){
+  background-color: yellowgreen;
+}
+p:nth-child(3n+1){
+  background-color: hsla(0,100%,63%,0.9);
+}
 
 
 /**	05	Media  **/
