@@ -232,13 +232,10 @@ p:nth-child(3n+1){
 
 /**	05	Media  **/
 @media print{
-  div{
-    position: static;
-    color: black;
-    background-color: white;
-    margin: 0px;
-    border: none;
-    padding: 0px;
+  body::after{
+    content: "Created by yilian zhang. You can not print this document. ";
   }
-
+  div{
+    display: none;
+  }
 }
