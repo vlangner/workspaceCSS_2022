@@ -255,6 +255,18 @@ h3:active ~p{
   transform: scale(0.2);
 }
 
+/* animation */
+@keyframes movecolor{
+  from {background-image: linear-gradient(yellow,green,white);}
+  30% {background-image: linear-gradient(green,white,yellow);}
+  60% {background-image: linear-gradient(white, yello,green);}
+}
+
+h2{
+  background-image: linear-gradient(yellow,green,white);
+  animation: 4s infinite running movecolor;
+}
+
 
 
 /**	05	Media  **/
