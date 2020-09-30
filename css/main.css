@@ -228,6 +228,33 @@ p:nth-child(3n){
 p:nth-child(3n+1){
   background-color: hsla(0,100%,63%,0.9);
 }
+/*
+tr:nth-child(2n) ---- even rows
+*/
+
+/*textshadow boxshadow border radius transform*/
+h3{
+  text-shadow: 0.3em 0.3em 0.1em bisque;
+  border: black solid 1px;
+  border-radius: 10px 20px 30px 30px;
+  box-shadow: -10px -20px 10px black;
+  transition:ease-in-out 3s, transform 3s;   /* main element */
+}
+
+h3:hover{
+  transform:translate(10px,10px);
+}
+
+h3~p{
+  opacity: 1;
+  transition: ease-in-out 3s, all 3s;
+}
+
+h3:active ~p{
+  opacity:0;
+  transform: scale(0.2);
+}
+
 
 
 /**	05	Media  **/
