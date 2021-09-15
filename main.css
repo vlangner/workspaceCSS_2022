@@ -1,0 +1,280 @@
+	/*
+	================================================
+	CSS Zen Garden theme 
+	================================================
+	Handcrafted by yilian zhang
+	
+	Last updated on 09/2020
+	================================================
+	01	Color
+	02	Typography
+	03	Layout
+	04	Other decoration
+  05  Media Queries
+	================================================
+	*/
+
+	/* ---------------------------------------------------------------------------------------------------------- 
+	01 Color ----------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------------- */
+html{
+  background-color: hsla(145, 35%, 89%,0.9);
+  padding:5%;
+}
+
+body{
+  background-color: hsla(190, 51%, 65%, 0.5);
+  color: hsla(180, 100%, 100%, 0.9)
+}
+
+header h1{
+  background-color: hsla(0,100%,63%,0.9);
+}
+
+div.preamble, div.requirements, div.benefits{
+  color: hsla(180,0%,25%,0.9);
+  background-color: hsla(0,100%,100%,0.9);
+}
+
+footer{
+    background-color: hsla(61,86%,77%,0.9);
+    color: hsla(180,0%,25%,0.9);
+
+}
+
+div.participation{
+    background-color: hsla(351,82%,55%,0.9);
+}
+
+aside.sidebar{
+  background-color:hsla(61,86%,77%,0.9);
+}
+
+/** 02 Typography -- Font  **/
+
+
+body{
+    font-family: "tablet-gothic-condensed",verdana, arial, sans-serif; 
+}
+p{
+  font-size: 1.25em;
+}
+
+h3{
+  font-size:2.25em; font-weight: 200;letter-spacing: 1px;
+  line-height: 1em; padding:0.5em 0 0.25em 0;
+}
+
+h2{
+    font-weight:900; /* Heavy */ font-size:6em; letter-spacing:1px;
+    line-height:1em;
+}
+
+div.summary{
+  /*font-family: 'Ranchers', cursive;*/
+  text-transform: uppercase;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+h1{
+  text-indent: -2px;
+  
+}
+/** 03 Position, Size, layout **/
+div,
+article,
+section,
+header,
+footer,
+nav,
+figure,
+li{
+  position: relative;
+}
+
+aside.sidebar{
+  position: absolute;
+  top: 3%;
+  right: 0;
+  width:27%;
+}
+
+section.intro{
+  width: 60.7%;
+  padding: 5%;
+}
+
+section.intro div.preamble{
+  margin-left: -30%;
+  padding: 5% 5% 5% 30%;
+}
+div.page-wrapper{
+  padding: 5%;
+  z-index: 2;
+}
+
+div.extra1{
+  position: fixed;
+  top:0;
+  right:0;
+  width: 30%;
+  /*bottom:0;*/
+  height: 600px;
+  background-color: hsla(227,15%,24%,0.5);
+  z-index:1;
+}
+
+div.explanation{
+  float:left;
+  width:40%;
+  padding:5%;
+}
+div.participation{
+  margin-left:50%;
+  width:40%;
+  padding:5%;
+
+}
+div.benefits{
+  float:left;
+  width:30%;
+  padding:5%;
+}
+div.requirements{
+  margin-left:40%;
+  width:50%;
+  padding:5%;
+
+}
+
+h2{
+  border: 3px dashed hsla(180,0%,25%,0.9);
+  border-radius: 20px;
+}
+
+a{
+  border-bottom: 1px inset black;
+}
+
+/* use margin to center element */
+footer{
+  clear:both;
+  color: #fff;
+  padding: 1em 5%;
+  width: 50%;
+  margin: 10em auto;
+}
+
+div.summary{
+  display:none;
+}
+
+
+/** other decoration **/
+
+/* nav bar on top */
+#zen-resources {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: blanchedalmond;
+}
+
+/* hide the h3 inside of zen resources */
+#zen-resources h3{
+  display:none;
+}
+
+#zen-resources ul li{
+  display: inline-block;
+  padding: 2%;
+  width: 200px;
+  background-color: hsla(234,35%,89%,0.9);
+}
+
+#zen-resources a{
+  border: 0px;
+}
+
+/* hover over active practice */
+p:active{
+  border: 5px solid brown;
+}
+
+p{
+  visibility: visible;
+}
+
+h3:active ~p{
+  visibility: hidden;
+}
+
+li:first-of-type{
+  color:blueviolet;
+}
+
+p::first-letter{
+  font-size: 300%;
+}
+
+p:nth-child(3n){
+  background-color: yellowgreen;
+}
+p:nth-child(3n+1){
+  background-color: hsla(0,100%,63%,0.9);
+}
+/*
+tr:nth-child(2n) ---- even rows
+*/
+
+/*textshadow boxshadow border radius transform*/
+h3{
+  text-shadow: 0.3em 0.3em 0.1em bisque;
+  border: black solid 1px;
+  border-radius: 10px 20px 30px 30px;
+  box-shadow: -10px -20px 10px black;
+  transition:ease-in-out 3s, transform 3s;   /* main element */
+}
+
+h3:hover{
+  transform:translate(10px,10px);
+}
+
+h3~p{
+  opacity: 1;
+  transition: ease-in-out 3s, all 3s;
+}
+
+h3:active ~p{
+  opacity:0;
+  transform: scale(0.2);
+}
+
+/* animation */
+@keyframes movecolor{
+  from {background-image: linear-gradient(yellow,green,white);}
+  30% {background-image: linear-gradient(green,white,yellow);}
+  60% {background-image: linear-gradient(white, yello,green);}
+}
+
+h2{
+  background-image: linear-gradient(yellow,green,white);
+  animation: 4s infinite running movecolor;
+}
+
+
+
+/**	05	Media  **/
+@media print{
+  body::after{
+    content: "Created by yilian zhang. You can not print this document. ";
+  }
+  div{
+    display: none;
+  }
+}
