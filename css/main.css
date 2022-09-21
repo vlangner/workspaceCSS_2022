@@ -65,3 +65,70 @@ footer{
     left: 30%;
     bottom: 0px;
 }
+
+section.intro{
+    width: 65%;
+}
+
+div.explanation{
+    float: left;
+    width: 40%;
+    padding: 5%;
+}
+
+div.participation{
+    margin-left: 50%;
+    width: 40%;
+    padding: 5%;
+}
+
+div.benefits{
+    float: left;
+    top: 100px;
+    width: 45%;
+    padding: 5%;
+}
+
+div.requirements{
+    margin-left: 50%;
+    width: 45%;
+    padding: 5%;
+}
+
+
+/* font */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* local font*/
+@font-face {
+    font-family: 'practice';
+    src: url('../fonts/chunkfive.woff');
+}
+header h1{
+    font-family: 'Allan', cursive;
+    text-indent: 50px;
+    background-image: url(../img/zengarden.gif);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header h2{
+    font-size: 2cm;
+    font-weight: 300;
+    letter-spacing: 1px; 
+}
+
+header h3{
+    font-size: 2.25cm;
+    font-weight: 200;
+    letter-spacing: .5px;
+    line-height: 1cm;
+    text-transform: uppercase;
+}
+
